@@ -100,3 +100,23 @@ const people = [
   { fName: "Gabriel", lName: "Dicki" },
   { fName: "Obie", lName: "Hayes" },
 ];
+
+const searchBar = document.getElementById("searchbar");
+const results = document.getElementById("results");
+
+searchBar.addEventListener('input', (e) =>{
+
+  const value = e.target.value;
+
+  const filteredPeople =  people.map(person => `${person.fName} ${person.Lname}`.filter(fullName.toLowerCase().include(value)));
+
+  // for(let i = 0; i<filteredPeople.length(); i++) {
+  //   if (people[i].fName.includes(value)) (
+  //     filteredPeople.push(people[i]).fname);
+  //   )
+  // };
+
+  // console.log(filteredPeople);
+
+  // results.innerHTML = fiteredPeople.join("<br>");
+});
